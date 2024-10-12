@@ -14,16 +14,16 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.0.6",
     "@strapi/plugin-users-permissions": "5.0.6",
+    "@strapi/provider-upload-aws-s3": "^5.0.6",
     "@strapi/strapi": "5.0.6",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
-    "pg": "8.8.0",
+    "pg": "^8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
