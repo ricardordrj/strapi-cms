@@ -62,6 +62,34 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_banners';
+  info: {
+    displayName: 'banner';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    button: Schema.Attribute.Component<'shared.banner-button', false>;
+  };
+}
+
+export interface SharedBannerButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_banner_buttons';
+  info: {
+    displayName: 'bannerButton';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +98,8 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
+      'shared.banner': SharedBanner;
+      'shared.banner-button': SharedBannerButton;
     }
   }
 }

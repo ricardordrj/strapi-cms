@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_banner_buttons",
+  "info": {
+    "displayName": "bannerButton",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
