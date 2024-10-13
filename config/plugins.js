@@ -26,7 +26,5 @@ module.exports = ({ env }) => ({
   documentation: {
     enabled: true
   },
-  "vercel-deploy": {
-    enabled: true,
-  },
+
 });
