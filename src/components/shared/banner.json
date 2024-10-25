@@ -1,21 +1,21 @@
 {
   "collectionName": "components_shared_banners",
   "info": {
-    "displayName": "banner",
+    "displayName": "bannerPrincipal",
     "icon": "picture",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "Titulo": {
       "type": "string",
       "required": true
     },
-    "content": {
+    "Conteudo": {
       "type": "text",
       "required": true
     },
-    "image": {
+    "Imagem": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -24,7 +24,7 @@
         "images"
       ]
     },
-    "button": {
+    "Botao": {
       "type": "component",
       "repeatable": false,
       "component": "shared.banner-button"

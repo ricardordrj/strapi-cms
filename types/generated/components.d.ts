@@ -65,28 +65,34 @@ export interface SharedMedia extends Struct.ComponentSchema {
 export interface SharedBanner extends Struct.ComponentSchema {
   collectionName: 'components_shared_banners';
   info: {
-    displayName: 'banner';
+    displayName: 'bannerPrincipal';
     icon: 'picture';
     description: '';
   };
   attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<'files' | 'images'> &
+    Titulo: Schema.Attribute.String & Schema.Attribute.Required;
+    Conteudo: Schema.Attribute.Text & Schema.Attribute.Required;
+    Imagem: Schema.Attribute.Media<'files' | 'images'> &
       Schema.Attribute.Required;
-    button: Schema.Attribute.Component<'shared.banner-button', false>;
+    Botao: Schema.Attribute.Component<'shared.banner-button', false>;
   };
 }
 
 export interface SharedBannerButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_banner_buttons';
   info: {
-    displayName: 'bannerButton';
+    displayName: 'BotaoBannerPrincipal';
     icon: 'chartBubble';
+    description: '';
   };
   attributes: {
-    label: Schema.Attribute.String & Schema.Attribute.Required;
-    link: Schema.Attribute.String;
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+    Link: Schema.Attribute.String;
+    Cor: Schema.Attribute.Enumeration<
+      ['primary', 'body', 'border', 'theme_light', 'error', 'warning', 'info']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'primary'>;
   };
 }
 

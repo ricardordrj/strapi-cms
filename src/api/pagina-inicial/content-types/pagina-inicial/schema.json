@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagina_inicials",
+  "info": {
+    "singularName": "pagina-inicial",
+    "pluralName": "pagina-inicials",
+    "displayName": "Pagina Inicial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "BannerPrincipal": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.banner"
+    }
+  }
+}

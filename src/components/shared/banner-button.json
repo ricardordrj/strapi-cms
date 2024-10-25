@@ -1,17 +1,32 @@
 {
   "collectionName": "components_shared_banner_buttons",
   "info": {
-    "displayName": "bannerButton",
-    "icon": "chartBubble"
+    "displayName": "BotaoBannerPrincipal",
+    "icon": "chartBubble",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "label": {
+    "Label": {
       "type": "string",
       "required": true
     },
-    "link": {
+    "Link": {
       "type": "string"
+    },
+    "Cor": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "body",
+        "border",
+        "theme_light",
+        "error",
+        "warning",
+        "info"
+      ],
+      "required": true,
+      "default": "primary"
     }
   }
 }
